@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <title>Implementierung</title>
+</head>
+
+<body>
+<!--  Start Upper Bar -->
+<div class="upper-bar">
+    <div class="container">
+    </div>
+</div>
+<!-- End Upper Bar -->
+
+<!-- Start Nav bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="navbar-nav mr-auto" id="myDIVimple">
+                <li class="nav-impl active">
+                    <a class="nav-link" href="/">Home
+                        <span
+                                class="sr-only">(current)</span> </a>
+                </li>
+                <li class="nav-impl">
+                    <a class="nav-link" id="impllement" href="/implementierung">Implementierung der Algorithmen</a>
+                </li>
+            </ul>
+
+            <h2 class="navbar-brand brand-name">
+                <a href="/"><img class ="img-fluid" src="images/download.png"></a>
+            </h2>
+        </div>
+    </div>
+</nav>
+<!-- End Nav Bar -->
+<!--Start References -->
+<div class="startBody">
+
+    <div class="implementierung">
+        <div class="container">
+            <div class="myHeading">
+                <h2 class="implemen" id="impl"> References</h2>
+            </div>
+            <ul>
+                <li>
+                    K. J. Supowit, 1983. The Relative Neighborhood Graph, with an Application to Minimum Spanning Trees. In: Journal of the Association for Comping Machinery, Vol. 30. No 3. July 1983, pp. 428-448.
+                </li>
+                <li>
+                    J. W. Jaromczyk, G. T. Toussaint. 1992 , Relative neighborhood graphs and their relatives. In: Proceedings of the IEEE, Vol. 9 No.80 October 1992, pp.1502-1517.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--End References-->
+
+    <footer class="bd-footer text-muted">
+        <div class="container">
+            <ul class="bd-footer-links">
+                <li><a href="https://github.com/ousama1994/Abschlussarbeit">GitHub</a></li>
+                <li><a href="/references">References</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+            </ul>
+            <p>Entworfen von @Ousama EL Emrani</p>
+        </div>
+    </footer>
+</div>
+
+<script src="js/jquery-3.4.0.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function () {
+        $(function () {
+            'use strict';
+            // HEADER: Adjust Slider Height
+            var windowHeigh = $(window).height();
+
+            var upperH = $('.upper-bar').innerHeight();
+            var nav = $('.navbar').innerHeight();
+            var navH = $('footer').innerHeight();
+
+            $('.implementierung').height(windowHeigh - (navH + nav + upperH));
+        });
+// ++++++++++++++++++++++++++ End Change the Color if the link is clicked ++++++++++++++++++++++++++++++++++++++++++//
+    });
+
+    //]]>
+
+</script>
+
+</body>
+</html>

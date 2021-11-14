@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <title>Implementierung</title>
+</head>
+
+<body>
+<!--  Start Upper Bar -->
+<div class="upper-bar">
+    <div class="container">
+    </div>
+</div>
+<!-- End Upper Bar -->
+
+<!-- Start Nav bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="navbar-nav mr-auto" id="myDIVimple">
+                <li class="nav-impl active">
+                    <a class="nav-link" href="/">Home
+                        <span
+                                class="sr-only">(current)</span> </a>
+                </li>
+                <li class="nav-impl">
+                    <a class="nav-link" id="impllement" href="/implementierung">Implementierung der Algorithmen</a>
+                </li>
+            </ul>
+            <h2 class="navbar-brand brand-name">
+                <a href="/"><img class ="img-fluid" src="images/download.png"></a>
+            </h2>
+        </div>
+    </div>
+</nav>
+<!-- End Nav Bar -->
+<!--Start Impressum-->
+<div class="startBody">
+    <div class="implementierung">
+        <div class="container">
+            <div class="myHeading">
+                <h2 class="implemen" id="impl"> Impressum</h2>
+            </div>
+            <p>
+                Ousama EL Emrani<br/>
+                Bruchbachstr. 20 <br/>
+                53343 Wachtberg<br/>
+                Germany
+            </p>
+            <h4> Kontakt </h4>
+            <p>
+                Handy: +49 1767308465<br/>
+                E-Mail: <a href="mailto:dict@leo.org" class="c-link">ousama.emrani@smail.inf.h-brs.de</a>
+            </p>
+        </div>
+    </div>
+</div>
+<footer class="bd-footer text-muted">
+    <div class="container">
+        <ul class="bd-footer-links">
+            <li><a href="https://github.com/ousama1994/Abschlussarbeit">GitHub</a></li>
+            <li><a href="/references">References</a></li>
+            <li><a href="/impressum">Impressum</a></li>
+        </ul>
+        <p>Entworfen von @Ousama EL Emrani</p>
+    </div>
+</footer>
+<script src="js/jquery-3.4.0.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function () {
+        $(function () {
+            'use strict';
+            // HEADER: Adjust Slider Height
+            var windowHeigh = $(window).height();
+
+            var upperH = $('.upper-bar').innerHeight();
+            var nav = $('.navbar').innerHeight();
+            var navH = $('.bd-footer').innerHeight();
+            $('.implementierung').height(windowHeigh - (navH + nav + upperH));
+        });
+// ++++++++++++++++++++++++++ End Change the Color if the link is clicked ++++++++++++++++++++++++++++++++++++++++++//
+    });
+
+    //]]>
+
+</script>
+<!-- noch weiter -->
+
+</body>
+</html>

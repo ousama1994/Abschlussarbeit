@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <title>Abschussarbeit Informatik</title>
+</head>
+<body>
+<!--  Start Upper Bar -->
+<div class="upper-bar">
+    <div class="container">
+    </div>
+</div>
+<!-- End Upper Bar -->
+
+<!-- Start Nav bar  -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="navbar-nav mr-auto" id="myDIV">
+                <li class="nav-item">
+                    <a class="nav-link einfuer" href="#">Definition </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link anwendun" href="#">Applikationen</a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Algorithmen <span
+                            class="sr-only">(current)</span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item heuristische" href="#">RNG1</a>
+                        <a class="dropdown-item heuristische" href="#">RNG2</a>
+                        <a class="dropdown-item heuristische" href="#">RNG3</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/implementierung" target="_blank">Anwendung der Algorithmen</a>
+                </li>
+            </ul>
+            <h2 class="navbar-brand brand-name">
+                <a href="/"><img class="img-fluid" src="images/download.png"></a>
+            </h2>
+        </div>
+    </div>
+</nav>
+<!-- End Nav Bar  -->
+
+<!--  Start Slider -->
+<div class="slider">
+    <div id="main-slider" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <h2><span>Implementierung und Analyse von Algorithmen zur Erzeugung relativer Nachbarschaftsgraphen </span>
+            </h2>
+            <div class="overlay"></div>
+            <div class="carousel-item carousel-one active">
+            </div>
+            <div class="carousel-item carousel-two">
+            </div>
+            <div class="carousel-item carousel-three">
+            </div>
+            <div class="carousel-item carousel-four">
+            </div>
+        </div>
+        <ol class="carousel-indicators">
+            <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+            <li data-target="#main-slider" data-slide-to="1"></li>
+            <li data-target="#main-slider" data-slide-to="2"></li>
+            <li data-target="#main-slider" data-slide-to="3"></li>
+        </ol>
+
+    </div>
+</div>
+<!--  End Slider  -->
+<!--  Start Einfuerung  -->
+<div class="startBody">
+    <div class="einfuerung">
+        <div class="container">
+            <div class="myHeading this">
+                <h1>Relative Nachbarschaftsgraphen </h1>
+                <h2 class="einf">Definition</h2>
+                <p align="justify">Relative Nachbarschaftsgraphen beschreiben in der algorithmischen Geometrie jene
+                    Graphen, bei denen für alle Punkte p und q der Knotenmenge V im euklidischen Bereich gilt, dass sie
+                    nur dann mit einer Kante (p,q) verbunden, wenn es keinen weiteren Knoten z gibt, der zwischen p und
+                    q liegt. Der Bereich zwischen p und q, in welchem sich kein weiterer Knoten befinden darf, wird
+                    wegen seiner Form in der Literatur „Mond“-Bereich <b>(lun) </b>genannt. Dieser Bereich, ist die
+                    Schnittmenge zweier Kreise um die Punkte p und q, welche die Distanz zwischen p und q als Radius
+                    haben. Formal wird dieser Bereich bzw. <br/>die Knotenmenge in dem Bereich beschrieben als:
+
+                    <img src="images/lun.PNG"/>
+                    Eine Kante (p,q) ist nur dann Bestandteil des relativen Nachbarschaftsgraphen, wenn der
+                    Bereich
+                    <b>lun(p,q)∩V=∅</b> , d.h. wenn es keinen Knoten z∈V im Bereich zwischen p und q gibt.</p>
+
+            </div>
+        </div>
+    </div>
+    <!--  End Einfuerung  -->
+    <!-- Start Anwendung  -->
+    <div class="anwendung">
+        <div class="container">
+            <div class="myHeading this">
+                <h2 class="anwend">Applikationen</h2>
+                <h3>Kartographie</h3>
+                <p>Im Bereich der Kartographie soll es beispielsweise möglich sein, anhand großer Knotenmengen Berge und
+                    Täler geeignet auf Karten darstellen zu können. Relative Nachbarschaftsgraphen können hier einen
+                    Beitrag zur Erzeugung solcher Karten leisten.</p>
+                <h3>Gesichtserkennung</h3>
+                <p>
+                    Die Gesichtserkennung ist ein weiteres Anwendungsgebiet, in welchem die Identifikation von
+                    Strukturen wichtig für eine sinnvolle Interpretation ist. Um zwei Gesichter unterschiedlicher
+                    Personen differenzieren zu können, müssen die einzigartigen Merkmale in den identifizierten
+                    Strukturen enthalten sein.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- End Anwendung  -->
+    <!--  Start Algorithmen  -->
+    <div class="algorithmen">
+        <div class="container">
+            <div class="myHeading">
+                <h2>Algorithmen</h2>
+
+                <h3 class="exakt">RNG1</h3>
+
+                <!--                <h4>effizienter Algorithmus</h4>-->
+                <p align="justify">Beim RNG1-Algorithmus handelt es sich um einen eigenständigen Algorithmus zur
+                    Erzeugung eines relativen Nachbarschaftsgraphen mit einer Komplexität von <b>O(n³)</b>.</p>
+                <h3 class="heuristi">RNG2</h3>
+                <p align="justify">Mit dem RNG2-Algorithmus können relative Nachbarschaftsgraphen mit einer Komplexität
+                    von <b>O(n²)</b> erzeugt werden. Die Reduktion der Komplexität gegenüber des RNG1-Algorithmus ist der
+                    Verwendung des Delaunay-Triangulationsverfahrens geschuldet.</p>
+
+                <h4>RNG3</h4>
+                <p align="justify">Auch der RNG3-Algorithmus macht sich das Delaunay-Triangulationsverfahrens zu Nutze.
+                    Der Ausgangsgraph wird außerdem in sechs Bereiche unterteilt, die jeweils für sich betrachtet
+                    werden. Durch diese geometrischen Überlegungen kann die Komplexität des Algorithmus weiter auf
+                    <b>O(n*log(n))</b> reduziert werden.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bd-footer text-muted">
+        <div class="container">
+            <ul class="bd-footer-links">
+                <li><a href="https://github.com/ousama1994/Abschlussarbeit">GitHub</a></li>
+                <li><a href="/references">References</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+            </ul>
+            <p>Entworfen von @Ousama EL Emrani</p>
+        </div>
+    </footer>
+</div>
+
+<script src="js/jquery-3.4.0.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function () {
+// ++++++++++++++++++++++++++ End Change the Color if the link is clicked ++++++++++++++++++++++++++++++++++++++++++//
+
+        var header = document.getElementById("myDIV");
+        var btns = header.getElementsByClassName("nav-item");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    });
+
+    //]]>
+
+</script>
+<!--noch weiter-->
+</body>
+</html>

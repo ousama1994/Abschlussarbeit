@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+
+    <title>Anwendung</title>
+</head>
+<body>
+<!--  Start Upper Bar -->
+<div class="upper-bar">
+    <div class="container">
+    </div>
+</div>
+<!-- End Upper Bar -->
+<!-- Start Nav bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="navbar-nav mr-auto" id="myDIVimple">
+                <li class="nav-impl active">
+                    <a class="nav-link" href="/">Home
+                        <span
+                                class="sr-only">(current)</span> </a>
+                </li>
+                <li class="nav-impl">
+                    <a class="nav-link" id="impllement" href="#impl">Anwendung der Algorithmen</a>
+                </li>
+            </ul>
+            <h2 class="navbar-brand brand-name">
+                <a href="/"><img class="img-fluid" src="images/download.png"></a>
+            </h2>
+        </div>
+    </div>
+</nav>
+<!-- End Nav Bar -->
+
+<!-- Start Slider -->
+<div class="slider">
+    <div id="main-slider" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <h2><span>Anwendung der Algorithmen zur Erzeugung relativer Nachbarschaftsgraphen</span>
+            </h2>
+            <div class="overlay"></div>
+            <div class="carousel-item carousel-twwo active">
+            </div>
+            <div class="carousel-item carousel-thhree">
+            </div>
+            <div class="carousel-item carousel-foour">
+            </div>
+        </div>
+        <ol class="carousel-indicators">
+            <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+            <li data-target="#main-slider" data-slide-to="1"></li>
+            <li data-target="#main-slider" data-slide-to="2"></li>
+        </ol>
+    </div>
+</div>
+<!-- End Slider -->
+
+<!--Start Algorithm Implementation-->
+<div class="startBody">
+
+    <div class="implementierung">
+        <div class="container">
+            <div class="myHeading">
+                <h2 class="implemen" id="impl">Algorithmen zur Erzeugung relativer Nachbarschaftsgraphen</h2>
+            </div>
+            <div class="anweisung">
+                <p>
+                    Im Folgenden können für hochgeladene Graphen relative Nachbarschaftsgraphen erzeugt werden. Hierfür
+                    muss zunächst ein Graph in Form einer Textdatei hochgeladen werden. Die Textdatei muss dabei so
+                    formatiert sein, dass jede Zeile der Textdatei einen Knoten des Graphen repräsentiert. <br/>Das
+                    bedeutet,
+                    dass jede Zeile die x- und y-Koordinate eines Knoten enthält, die jeweils mit einem Tabstopp
+                    getrennt sind. <br/>Das erfolgreiche Hochladen einer Graph-Datei wird mit einem entsprechenden
+                    Update-Status signalisiert.
+                </p>
+                <p>
+                    Anschließend kann der zu verwendende Algorithmus zur Erzeugung eines relativen Nachbarschaftsgraphen
+                    ausgewählt werden. Es können auch mehrere Algorithmen ausgewählt werden, die dann nacheinander
+                    ausgeführt werden.
+                </p>
+                <p>
+                    Schließlich kann mit der Betätigung des „Berechne“-Buttons die Berechnung gestartet werden. Nach dem
+                    Abschluss der Berechnungen werden die Ergebnisse im JSON-Format auf der HTML-Seite angezeigt. <br/>
+                    Neben
+                    den Knoten und Kanten des relativen Nachbarschaftsgraphen, wird sowohl der verwendete Algorithmus
+                    benannt, als auch die Anzahl der Kanten und die Laufzeit der Berechnung angezeigt.
+                </p>
+
+            </div>
+            <div class="myHeading">
+                <h3>Anwendung der Algorithmen</h3>
+            </div>
+
+            <div class="uploadContainer">
+                <div class="upload-header">
+                    <h3>Graph hochladen</h3>
+                </div>
+                <div class="upload-content">
+                    <div class="single-upload">
+                        <h3>Datei hochladen</h3>
+                        <form method="POST" action="/upload" target="_blank" enctype="multipart/form-data">
+                            <input type="file" name="file" id="myGraphSubmit" required=""/>
+                            <button type="submit" class="primary submit-btn">Hochladen</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="submitAlgor">
+                <div class="multiselect">
+                    <div class="selectBox" onclick="showCheckboxes()">
+                        <select>
+                            <option>Algorithmus auswählen</option>
+                        </select>
+                        <div class="overSelect"></div>
+                    </div>
+                    <form class="CheckBox" action="editCustomer" method="post">
+                        <div id="checkboxes">
+                            <option class="divide">Algorithmen</option>
+                            <!-- <br/> -->
+                            <label>
+                                <input type="checkbox" class="chk" value="RNG1"/>RNG1
+                            </label>
+                            <label>
+                                <input type="checkbox" class="chk" value="RNG2"/>RNG2
+                            </label>
+                            <label>
+                                <input type="checkbox" class="chk" value="RNG3"/>RNG3
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <button class="submitAlgorithm">Berechne</button>
+            </div>
+            <div id="showmyjson">
+            </div>
+            <!--End Algorithm Implementation-->
+        </div>
+    </div>
+    <footer class="bd-footer text-muted">
+        <div class="container">
+            <ul class="bd-footer-links">
+                <li><a href="https://github.com/ousama1994/Abschlussarbeit">GitHub</a></li>
+                <li><a href="/references">References</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+            </ul>
+            <p>Entworfen von @Ousama EL Emrani</p>
+        </div>
+    </footer>
+</div>
+<!--  End IMPLEMENTIERUNG -->
+
+<script src="js/jquery-3.4.0.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function () {
+
+        $('.submitAlgorithm').click(function () {
+            submitSelectedAlgorithms();
+        });
+    });
+    //]]>
+</script>
+</body>
+</html>
